@@ -689,12 +689,11 @@ button { font-family: inherit; }
   border: 1px solid var(--cream-3);
   overflow: hidden;
   background: var(--cream);
-  /* reserve space while Calendly loads */
   min-height: 700px;
   position: relative;
 }
 .booking__widget::before {
-  content: 'Loading calendar…';
+  content: 'Loading calendar\2026';
   position: absolute;
   inset: 0;
   display: flex;
