@@ -32,6 +32,7 @@
         <li><a href="#expertise" class="nav__link">Expertise</a></li>
         <li><a href="#work" class="nav__link">Work</a></li>
         <li><a href="#contact" class="nav__link">Contact</a></li>
+        <li><a href="#booking" class="nav__link nav__link--cta">Book a Call</a></li>
       </ul>
     </div>
   </nav>
@@ -57,6 +58,10 @@
         <p class="hero__tagline">Scalable Environments&nbsp;·&nbsp;Automation&nbsp;·&nbsp;Infrastructure at Global Scale</p>
         <div class="hero__cta">
           <a href="#work" class="btn btn--primary">View My Work</a>
+          <a href="#booking" class="btn btn--gold-outline">
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" width="14" height="14"><rect x="2" y="3" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.4"/><path d="M5 1v4M11 1v4M2 7h12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            Book a Call
+          </a>
           <a href="#contact" class="btn btn--outline">Get In Touch</a>
         </div>
       </div>
@@ -321,6 +326,38 @@
     </div>
   </section>
 
+  <!-- ── BOOKING ─────────────────────────── -->
+  <section class="booking section" id="booking" aria-label="Book a call with Jerry Ko">
+    <div class="container">
+      <header class="section-header">
+        <div class="section-label reveal">
+          <span class="section-label__line" aria-hidden="true"></span>
+          <span>Book a Call</span>
+        </div>
+        <h2 class="section-title reveal">Schedule Time With Me</h2>
+        <p class="booking__sub reveal reveal-delay-1">Pick a slot that works for you. All meetings are via Zoom — the link is generated automatically the moment you book, synced directly with my Google Calendar.</p>
+      </header>
+      <div class="booking__widget reveal reveal-delay-2">
+        <!--
+          ┌─────────────────────────────────────────────────────────────┐
+          │  SETUP STEPS (one-time, ~5 minutes)                         │
+          │                                                             │
+          │  1. Sign up at https://calendly.com                         │
+          │  2. Connect Google Calendar (Settings → Calendar Connection) │
+          │  3. Connect Zoom (Integrations → Zoom)                      │
+          │  4. Create an event type (e.g. "30-Min Call")               │
+          │  5. Replace YOUR-CALENDLY-USERNAME below with your username  │
+          └─────────────────────────────────────────────────────────────┘
+        -->
+        <div
+          class="calendly-inline-widget"
+          data-url="https://calendly.com/YOUR-CALENDLY-USERNAME?background_color=F8F4EE&text_color=1C1C1C&primary_color=C5A028&hide_gdpr_banner=1"
+          aria-label="Calendly scheduling widget"
+        ></div>
+      </div>
+    </div>
+  </section>
+
   <!-- ── FOOTER ───────────────────────────── -->
   <footer class="footer" role="contentinfo">
     <div class="container footer__inner">
@@ -336,10 +373,13 @@
         <a href="#expertise">Expertise</a>
         <a href="#work">Work</a>
         <a href="#contact">Contact</a>
+        <a href="#booking">Book a Call</a>
       </nav>
     </div>
   </footer>
 
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
   <script src="main.js"></script>
 </body>
 </html>

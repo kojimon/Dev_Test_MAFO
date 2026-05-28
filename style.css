@@ -333,6 +333,17 @@ button { font-family: inherit; }
   color: var(--ink);
   transform: translateY(-2px);
 }
+.btn--gold-outline {
+  background: transparent;
+  border-color: var(--gold);
+  color: var(--gold);
+}
+.btn--gold-outline:hover {
+  background: var(--gold);
+  color: var(--cream);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(197,160,40,0.28);
+}
 .btn--full { width: 100%; }
 
 /* ── SECTION COMMONS ───────────────────────────────── */
@@ -662,6 +673,59 @@ button { font-family: inherit; }
   border-color: var(--gold);
   box-shadow: 0 0 0 3px rgba(197,160,40,0.1);
 }
+
+/* ── BOOKING ────────────────────────────────────────── */
+.booking { background: var(--white); }
+
+.booking__sub {
+  font-size: 16px;
+  line-height: 1.72;
+  color: var(--ink-3);
+  max-width: 580px;
+  margin-top: 16px;
+}
+.booking__widget {
+  margin-top: 48px;
+  border: 1px solid var(--cream-3);
+  overflow: hidden;
+  background: var(--cream);
+  /* reserve space while Calendly loads */
+  min-height: 700px;
+  position: relative;
+}
+.booking__widget::before {
+  content: 'Loading calendar…';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  pointer-events: none;
+}
+.calendly-inline-widget {
+  position: relative;
+  z-index: 1;
+  min-width: 320px;
+  height: 700px;
+}
+@media (max-width: 768px) {
+  .calendly-inline-widget { height: 1050px; }
+}
+
+/* Nav CTA pill variant */
+.nav__link--cta {
+  background: var(--gold);
+  color: var(--cream) !important;
+  padding: 7px 16px;
+  font-size: 10.5px;
+}
+.nav__link--cta::after { display: none !important; }
+.nav__link--cta:hover { background: var(--gold-3); }
 
 /* ── FOOTER ────────────────────────────────────────── */
 .footer {
